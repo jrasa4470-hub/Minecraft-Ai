@@ -1,0 +1,6 @@
+{
+  "name": "Minecraft Web Emulator - 3D Voxel Sandbox",
+  "description": "A high-performance browser-based Minecraft emulator and voxel sandbox with procedural world generation, mining, crafting, mobs, day-night cycle, inventory, and building.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Silkscreen', 'Press Start 2P', monospace, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+}
+
+/* Minecraft Pixel Art Rendering */
+.pixelated {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.mc-font {
+  font-family: 'Silkscreen', 'Press Start 2P', monospace;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.85);
+}
+
+.mc-font-press {
+  font-family: 'Press Start 2P', monospace;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.85);
+}
+
+/* Authentic Minecraft UI styling */
+.mc-button {
+  background: linear-gradient(180deg, #7c7c7c 0%, #5a5a5a 50%, #464646 100%);
+  border-top: 2px solid #a8a8a8;
+  border-left: 2px solid #a8a8a8;
+  border-right: 2px solid #222222;
+  border-bottom: 2px solid #222222;
+  color: #e0e0e0;
+  text-shadow: 2px 2px 0px #1a1a1a;
+  transition: filter 0.05s ease;
+}
+
+.mc-button:hover:not(:disabled) {
+  background: linear-gradient(180deg, #8b9bb4 0%, #687994 50%, #52637e 100%);
+  border-top-color: #b0c2dd;
+  border-left-color: #b0c2dd;
+  border-right-color: #2a3444;
+  border-bottom-color: #2a3444;
+  color: #ffffff;
+}
+
+.mc-button:active:not(:disabled) {
+  border-top-color: #222222;
+  border-left-color: #222222;
+  border-right-color: #a8a8a8;
+  border-bottom-color: #a8a8a8;
+  transform: translateY(1px);
+}
+
+.mc-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(1);
+}
+
+.mc-slot {
+  background-color: #8b8b8b;
+  border-top: 2px solid #373737;
+  border-left: 2px solid #373737;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+.mc-slot-active {
+  border-top: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  transform: scale(1.08);
+}
+
+.mc-panel {
+  background-color: #c6c6c6;
+  border-top: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+  border-right: 3px solid #555555;
+  border-bottom: 3px solid #555555;
+  box-shadow: inset -2px -2px 0px #373737, inset 2px 2px 0px #dbdbdb;
+}
+
+/* Yellow splash text animation */
+@keyframes splash-pulse {
+  0% { transform: scale(1) rotate(-15deg); }
+  50% { transform: scale(1.1) rotate(-15deg); }
+  100% { transform: scale(1) rotate(-15deg); }
+}
+
+.mc-splash {
+  animation: splash-pulse 1.2s infinite ease-in-out;
+  transform-origin: center center;
+}
